@@ -13,4 +13,10 @@ public class InstalacionRedes extends ServicioTecnologico{
     public InstalacionRedes(String nombre, String codigo, String descripcion) {
         super(nombre, codigo, descripcion, 180000);
     }
+
+
+
+
+
+
 }

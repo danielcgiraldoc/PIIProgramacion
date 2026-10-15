@@ -63,6 +63,14 @@ public class Tecnico {
         this.correo = correo;
     }
 
+    public double getCostoDesplazamiento() {
+        return costoDesplazamiento;
+    }
+
+    public void setCostoDesplazamiento(double costoDesplazamiento) {
+        this.costoDesplazamiento = costoDesplazamiento;
+    }
+
     public List<SolicitudServicio> getListSolicitudes() {
         return listSolicitudes;
     }
