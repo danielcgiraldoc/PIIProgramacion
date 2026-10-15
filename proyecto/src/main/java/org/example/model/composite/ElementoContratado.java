@@ -1,6 +1,6 @@
 package org.example.model.composite;
 
-public interface ElementoSistema {
+public interface ElementoContratado {
 
     /**
      * Metodo abstacto para calcularCosto

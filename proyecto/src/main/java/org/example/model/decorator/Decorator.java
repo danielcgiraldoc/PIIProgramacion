@@ -1,12 +1,20 @@
 package org.example.model.decorator;
 
-import org.example.model.composite.ElementoSistema;
+import org.example.model.composite.ElementoContratado;
 
-public abstract class Decorator implements ElementoSistema {
+public abstract class Decorator implements ElementoContratado {
 
-    protected final ElementoSistema elementoSistema;
+    protected final ElementoContratado elementoContratado;
 
-    public Decorator(ElementoSistema elementoSistema) {
-        this.elementoSistema = elementoSistema;
+    /**
+     * Metodo constructor del Decorator
+     * @param elementoContratado
+     */
+    public Decorator(ElementoContratado elementoContratado) {
+        this.elementoContratado = elementoContratado;
+    }
+
+    public ElementoContratado getElementoContratado() {
+        return elementoContratado;
     }
 }

@@ -1,15 +1,15 @@
 package org.example.model.decorator;
 
-import org.example.model.composite.ElementoSistema;
+import org.example.model.composite.ElementoContratado;
 
 public class AtencionPrioritaria extends Decorator {
 
     /**
      * Metodo que construye la clase AtencionPrioritaria
-     * @param elementoSistema
+     * @param elementoContratado
      */
-    public AtencionPrioritaria(ElementoSistema elementoSistema) {
-        super(elementoSistema);
+    public AtencionPrioritaria(ElementoContratado elementoContratado) {
+        super(elementoContratado);
     }
 
     /**
@@ -18,6 +18,6 @@ public class AtencionPrioritaria extends Decorator {
      */
     @Override
     public double calcularCosto() {
-        return elementoSistema.calcularCosto() + 35000;
+        return elementoContratado.calcularCosto() + 35000;
     }
 }

@@ -3,15 +3,17 @@ package org.example.model.composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PaqueteServicio implements ElementoSistema {
+public class PaqueteServicio implements ElementoContratado {
 
-    private List<ElementoSistema> listElementos;
+    private String codigo;
+    private List<ElementoContratado> listElementos;
 
 
     /**
      * Metodo que permite crear la clase ParquetService
      */
-    public PaqueteServicio() {
+    public PaqueteServicio(String codigo) {
+        this.codigo = codigo;
         this.listElementos = new ArrayList<>();
     }
 
@@ -23,7 +25,7 @@ public class PaqueteServicio implements ElementoSistema {
     public double calcularCosto() {
         double resultado = 0;
 
-        for (ElementoSistema elemento : listElementos) {
+        for (ElementoContratado elemento : listElementos) {
             resultado += elemento.calcularCosto();
         }
 
@@ -34,7 +36,7 @@ public class PaqueteServicio implements ElementoSistema {
      * Metodo para agregar un elemento al paquete
      * @param elemento
      */
-    public void agregarElemento(ElementoSistema elemento) {
+    public void agregarElemento(ElementoContratado elemento) {
         listElementos.add(elemento);
     }
 
@@ -43,15 +45,23 @@ public class PaqueteServicio implements ElementoSistema {
      * Metodo para eliminar un elemento del paquete
      * @param elemento
      */
-    public void eliminarElemento(ElementoSistema elemento) {
+    public void eliminarElemento(ElementoContratado elemento) {
         listElementos.remove(elemento);
     }
 
 
-    public List<ElementoSistema> getListElementos() {
+    public List<ElementoContratado> getListElementos() {
         return listElementos;
     }
-    public void setListElementos(List<ElementoSistema> listElementos) {
+    public void setListElementos(List<ElementoContratado> listElementos) {
         this.listElementos = listElementos;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 }

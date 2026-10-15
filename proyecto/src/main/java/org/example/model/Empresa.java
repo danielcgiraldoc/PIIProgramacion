@@ -1,6 +1,8 @@
 package org.example.model;
 
+import org.example.model.composite.PaqueteServicio;
 import org.example.model.composite.ServicioTecnologico;
+import org.example.model.factory.ServicioFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,17 +18,20 @@ public class Empresa {
     private String descripcion;
     private List<Cliente> listClientes;
     private List<ServicioTecnologico> listServicios;
-    private List<Paquete> listPaquetes;
+    private List<PaqueteServicio> listPaquetes;
+    private List<Solicitud> listSolicitudes;
+
+
 
     /**
-     * Metodo constructr que llena los datos de la empresa unica
+     * Metodo constructor que llena los datos de la empresa unica
      */
 
     private Empresa() {
         this.nombre = "TechSolutions";
         this.nit = "1092";
         this.correo = "techsolutions@gmail.com";
-        this.paginaWeb = "https//techslutions.com";
+        this.paginaWeb = "https//techsolutions.com";
         this.descripcion = "Somos una empresa dedicada a alas soluciones tecnologicas";
         this.listClientes = new ArrayList<>();
         this.listServicios = new ArrayList<>();
@@ -87,6 +92,20 @@ public class Empresa {
     public List<ServicioTecnologico> getListServicios() { return listServicios; }
     public void setListServicios(List<ServicioTecnologico> listServicios) { this.listServicios = listServicios; }
 
-    public List<Paquete> getListPaquetes() { return listPaquetes; }
-    public void setListPaquetes(List<Paquete> listPaquetes) { this.listPaquetes = listPaquetes; }
+
+    public List<PaqueteServicio> getListPaquetes() {
+        return listPaquetes;
+    }
+
+    public void setListPaquetes(List<PaqueteServicio> listPaquetes) {
+        this.listPaquetes = listPaquetes;
+    }
+
+    public List<Solicitud> getListSolicitudes() {
+        return listSolicitudes;
+    }
+
+    public void setListSolicitudes(List<Solicitud> listSolicitudes) {
+        this.listSolicitudes = listSolicitudes;
+    }
 }

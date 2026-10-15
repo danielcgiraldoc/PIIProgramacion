@@ -6,76 +6,62 @@ import java.util.List;
 public class Tecnico {
 
     private String documento;
-    private String nombre;
-    private String correo;
+    private boolean disponible;
     private double costoDesplazamiento;
-    private List<SolicitudServicio> listSolicitudes;
+
 
     /**
      * Metodo que construye al tecnico
      * @param documento
-     * @param nombre
-     * @param correo
-     * @param listSolicitudes
+     * @param disponible
+     * @param costoDesplazamiento
      */
-    public Tecnico(String documento, String nombre, String correo, List<SolicitudServicio> listSolicitudes, double costoDesplazamiento) {
+    public Tecnico(String documento, boolean disponible, double costoDesplazamiento) {
         this.documento = documento;
-        this.nombre = nombre;
-        this.correo = correo;
+        this.disponible = disponible;
         this.costoDesplazamiento = costoDesplazamiento;
-        this.listSolicitudes = new ArrayList<>();
     }
 
 
 
+public void setDocumento(String documento) {
+    this.documento = documento;
+}
 
+public double getCostoDesplazamiento() {
+    return costoDesplazamiento;
+}
 
-
-
-
-
-
-
-
-
+public void setCostoDesplazamiento(double costoDesplazamiento) {
+    this.costoDesplazamiento = costoDesplazamiento;
+}
 
     public String getDocumento() {
         return documento;
     }
 
-    public void setDocumento(String documento) {
-        this.documento = documento;
+    public boolean isDisponible() {
+        return disponible;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+
     }
 
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public double getCostoDesplazamiento() {
-        return costoDesplazamiento;
-    }
-
-    public void setCostoDesplazamiento(double costoDesplazamiento) {
-        this.costoDesplazamiento = costoDesplazamiento;
-    }
-
-    public List<SolicitudServicio> getListSolicitudes() {
-        return listSolicitudes;
-    }
-
-    public void setListSolicitudes(List<SolicitudServicio> listSolicitudes) {
-        this.listSolicitudes = listSolicitudes;
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

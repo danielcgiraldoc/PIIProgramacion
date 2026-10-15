@@ -1,15 +1,15 @@
 package org.example.model.decorator;
 
-import org.example.model.composite.ElementoSistema;
+import org.example.model.composite.ElementoContratado;
 
 public class SoporteMensual extends Decorator{
 
     /**
      * Metodo constructo de la clase SoporteMensual
-     * @param elementoSistema
+     * @param elementoContratado
      */
-    public SoporteMensual(ElementoSistema elementoSistema) {
-        super(elementoSistema);
+    public SoporteMensual(ElementoContratado elementoContratado) {
+        super(elementoContratado);
     }
 
     /**
@@ -18,6 +18,6 @@ public class SoporteMensual extends Decorator{
      */
     @Override
     public double calcularCosto() {
-        return elementoSistema.calcularCosto() + 50000;
+        return elementoContratado.calcularCosto() + 50000;
     }
 }

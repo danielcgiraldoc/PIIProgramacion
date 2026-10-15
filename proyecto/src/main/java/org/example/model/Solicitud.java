@@ -1,10 +1,12 @@
 package org.example.model;
 
+import org.example.model.composite.ElementoContratado;
 import org.example.model.composite.PaqueteServicio;
 
 import java.time.LocalDate;
+import java.util.List;
 
-public class SolicitudServicio {
+public class Solicitud {
 
     private String codigo;
     private LocalDate fechaCreacion;
@@ -12,7 +14,7 @@ public class SolicitudServicio {
     private double costoTotal;
     private Tecnico theTecnico;
     private Cliente theCliente;
-    private PaqueteServicio thePaquete;
+    private List<ElementoContratado> listElementos;
 
     /**
      * Metodo que construye la solicitud de servicio
@@ -21,7 +23,7 @@ public class SolicitudServicio {
      * @param atencionPresencial
      * @param costoTotal
      */
-    public SolicitudServicio(String codigo, LocalDate fechaCreacion, boolean atencionPresencial, double costoTotal) {
+    public Solicitud(String codigo, LocalDate fechaCreacion, boolean atencionPresencial, double costoTotal) {
         this.codigo = codigo;
         this.fechaCreacion = fechaCreacion;
         this.atencionPresencial = atencionPresencial;
@@ -35,7 +37,7 @@ public class SolicitudServicio {
      */
     public double calcularCostoTotal() {
         double total = 0;
-         total += thePaquete.getCostoBase();
+         total += thePaquete.calcularCosto();
         if (atencionPresencial){
             total += theTecnico.getCostoDesplazamiento();
          }
