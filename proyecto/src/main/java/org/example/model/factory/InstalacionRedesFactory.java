@@ -1,6 +1,6 @@
 package org.example.model.factory;
 import org.example.model.InstalacionRedes;
-import org.example.model.ServicioTecnologico;
+import org.example.model.composite.ServicioTecnologico;
 
 public class InstalacionRedesFactory extends ServicioFactory {
 

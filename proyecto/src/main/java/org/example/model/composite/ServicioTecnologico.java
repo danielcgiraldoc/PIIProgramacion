@@ -1,6 +1,6 @@
-package org.example.model;
+package org.example.model.composite;
 
-public abstract class ServicioTecnologico {
+public abstract class ServicioTecnologico implements ElementoSistema {
 
     protected String nombre;
     protected String codigo;

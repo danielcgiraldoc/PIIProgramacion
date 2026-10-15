@@ -1,8 +1,8 @@
 package org.example.model;
 
+import org.example.model.composite.PaqueteServicio;
+
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class SolicitudServicio {
 
@@ -35,7 +35,7 @@ public class SolicitudServicio {
      */
     public double calcularCostoTotal() {
         double total = 0;
-         total += thePaquete.getCosto();
+         total += thePaquete.getCostoBase();
         if (atencionPresencial){
             total += theTecnico.getCostoDesplazamiento();
          }
@@ -48,10 +48,11 @@ public class SolicitudServicio {
         return "SolicitudServicio{" +
                 "codigo='" + codigo + '\'' +
                 ", fechaCreacion=" + fechaCreacion +
-                ", cliente=" + theCliente +
-                ", elementosContratados=" + listServicios +
                 ", atencionPresencial=" + atencionPresencial +
                 ", costoTotal=" + costoTotal +
+                ", theTecnico=" + theTecnico +
+                ", theCliente=" + theCliente +
+                ", thePaquete=" + thePaquete +
                 '}';
     }
 
@@ -104,11 +105,11 @@ public class SolicitudServicio {
         this.theCliente = theCliente;
     }
 
-    public List<ServicioTecnologico> getElementosContratados() {
-        return listServicios;
+    public PaqueteServicio getThePaquete() {
+        return thePaquete;
     }
 
-    public void setElementosContratados(List<ServicioTecnologico> listServicios) {
-        this.listServicios = listServicios;
+    public void setThePaquete(PaqueteServicio thePaquete) {
+        this.thePaquete = thePaquete;
     }
 }

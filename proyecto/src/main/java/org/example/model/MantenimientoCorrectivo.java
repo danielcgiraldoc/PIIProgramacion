@@ -1,5 +1,7 @@
 package org.example.model;
 
+import org.example.model.composite.ServicioTecnologico;
+
 public class MantenimientoCorrectivo extends ServicioTecnologico {
 
 

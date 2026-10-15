@@ -1,6 +1,8 @@
 package org.example.model;
 
-public class RecuperacionInformacion extends ServicioTecnologico{
+import org.example.model.composite.ServicioTecnologico;
+
+public class RecuperacionInformacion extends ServicioTecnologico {
 
 
     /**

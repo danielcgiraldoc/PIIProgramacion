@@ -5,16 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc91245-cfa8-45ba-8c70-37957d607d75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/proyecto/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Empresa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/InstalacionRedes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/MantenimientoCorrectivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/MantenimientoPreventivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/RecuperacionInformacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/ServicioTecnologico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/SolicitudServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Tecnico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/composite/ElementoSistema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/composite/PaqueteServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/AtencionDomicilio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/AtencionPrioritaria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/Decorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/SoporteMensual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/InstalacionRedes.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/InstalacionRedes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/MantenimientoCorrectivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/MantenimientoCorrectivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/MantenimientoPreventivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/MantenimientoPreventivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/PaqueteServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/RecuperacionInformacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/RecuperacionInformacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/ServicioTecnologico.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/composite/ServicioTecnologico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/SolicitudServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/SolicitudServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/InstalacionRedesFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/InstalacionRedesFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/MantenimientoCorrectivoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/MantenimientoCorrectivoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/MantenimientoPreventivoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/MantenimientoPreventivoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/RecuperacionInformacionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/RecuperacionInformacionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/ServicioFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/factory/ServicioFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -33,67 +45,67 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.0772476E-315" />
-      <entry key="S2" value="1.81166912991332E-79" />
-      <entry key="S5" value="3.185895699505106E-32" />
-      <entry key="S10" value="1.78490776785615E-16" />
-      <entry key="S30" value="5.657268385682389E-6" />
-      <entry key="S60" value="0.002858341285312469" />
-      <entry key="M2" value="0.12445494596966666" />
-      <entry key="M5" value="2.185115322775776" />
-      <entry key="M10" value="8.498474821394433" />
-      <entry key="M15" value="15.736188469743935" />
-      <entry key="M30" value="33.42367544165632" />
-      <entry key="H1" value="51.81746432876596" />
-      <entry key="H2" value="65.60320510200785" />
-      <entry key="H4" value="74.12900845311528" />
-      <entry key="D1" value="82.25182976015871" />
-      <entry key="W1" value="83.74760278454318" />
+      <entry key="MS100" value="7.67688942536734E-104" />
+      <entry key="MS500" value="2.3825227542416202E-21" />
+      <entry key="S2" value="6.9864935792398455E-6" />
+      <entry key="S5" value="0.008663705989578729" />
+      <entry key="S10" value="0.09307903088010064" />
+      <entry key="S30" value="0.4531937989717737" />
+      <entry key="S60" value="0.6733236043299266" />
+      <entry key="M2" value="0.8412363861899771" />
+      <entry key="M5" value="1.471503171643883" />
+      <entry key="M10" value="3.274454690633868" />
+      <entry key="M15" value="5.883830976735513" />
+      <entry key="M30" value="16.591042672864166" />
+      <entry key="H1" value="38.79699887686442" />
+      <entry key="H2" value="66.5080950622394" />
+      <entry key="H4" value="89.62961612819869" />
+      <entry key="D1" value="116.53904315920634" />
+      <entry key="W1" value="122.0520057707855" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000000814786476" />
-      <entry key="S60" value="1.0008582625592573" />
-      <entry key="M2" value="1.1039994318894282" />
-      <entry key="M5" value="3.2589857501889656" />
-      <entry key="M10" value="10.013420594287917" />
-      <entry key="M15" value="17.823466066134767" />
-      <entry key="M30" value="36.92549753146529" />
-      <entry key="H1" value="56.69024192315256" />
-      <entry key="H2" value="71.42697687401669" />
-      <entry key="H4" value="80.51039597981348" />
-      <entry key="D1" value="89.14429691077257" />
-      <entry key="W1" value="90.7321299681171" />
+      <entry key="MS100" value="1.0000013770381886" />
+      <entry key="MS500" value="1.0672650077989874" />
+      <entry key="S2" value="1.5092707146292796" />
+      <entry key="S5" value="1.7683064676870004" />
+      <entry key="S10" value="1.94346411315331" />
+      <entry key="S30" value="2.367591288352116" />
+      <entry key="S60" value="2.6268669820951605" />
+      <entry key="M2" value="3.0020146116081317" />
+      <entry key="M5" value="5.6343495595858535" />
+      <entry key="M10" value="11.329483834621078" />
+      <entry key="M15" value="17.57877472082837" />
+      <entry key="M30" value="37.41823656030679" />
+      <entry key="H1" value="70.47267192862276" />
+      <entry key="H2" value="107.44852451746917" />
+      <entry key="H4" value="136.83536575254277" />
+      <entry key="D1" value="170.11537784600216" />
+      <entry key="W1" value="176.84529433331335" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.457287247606807E-5" />
-      <entry key="MS500" value="0.12815840473607423" />
-      <entry key="S2" value="0.5983244816153572" />
-      <entry key="S5" value="0.8142817649255766" />
-      <entry key="S10" value="0.9023756229672746" />
-      <entry key="S30" value="0.9663438399064573" />
-      <entry key="S60" value="0.986713940622716" />
-      <entry key="M2" value="1.2185629755466834" />
-      <entry key="M5" value="5.4293879963155" />
-      <entry key="M10" value="18.48751159802718" />
-      <entry key="M15" value="33.530497689145484" />
-      <entry key="M30" value="70.31944010009238" />
-      <entry key="H1" value="108.48530480508099" />
-      <entry key="H2" value="137.01623775649668" />
-      <entry key="H4" value="154.63159735548487" />
-      <entry key="D1" value="171.39469426098808" />
-      <entry key="W1" value="174.47952468933423" />
+      <entry key="MS100" value="5.608897572976025E-4" />
+      <entry key="MS500" value="0.24175451214370183" />
+      <entry key="S2" value="1.0540513096783364" />
+      <entry key="S5" value="1.5412374654359098" />
+      <entry key="S10" value="1.8939345162399979" />
+      <entry key="S30" value="2.748820983255675" />
+      <entry key="S60" value="3.256796862212832" />
+      <entry key="M2" value="3.8181949681417056" />
+      <entry key="M5" value="7.089688247147778" />
+      <entry key="M10" value="14.588140327735449" />
+      <entry key="M15" value="23.44524244524819" />
+      <entry key="M30" value="53.98795768741252" />
+      <entry key="H1" value="109.24745026924168" />
+      <entry key="H2" value="173.93883419733484" />
+      <entry key="H4" value="226.45341163586392" />
+      <entry key="D1" value="286.65198558801956" />
+      <entry key="W1" value="298.89693752482725" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3KjQKOj4pg0o9kHPRsbfgFEYq5J" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -108,6 +120,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "dev__Daniel",
     "ignore.virus.scanning.warn.message": "true",
