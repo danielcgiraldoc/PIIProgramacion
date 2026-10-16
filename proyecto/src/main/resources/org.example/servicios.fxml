@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #F4F7FB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.viewController.ServiciosViewController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="76.0" spacing="12.0" style="-fx-background-color: #142B4A;">
+            <padding>
+                <Insets bottom="14.0" left="34.0" right="34.0" top="14.0" />
+            </padding>
+            <children>
+                <VBox spacing="3.0">
+                    <children>
+                        <Label prefHeight="58.0" prefWidth="255.0" style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;" text="Servicios tecnológicos">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                    </children>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="btnVolver" onAction="#volverInicio" prefHeight="36.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: #8296AE; -fx-border-radius: 7px; -fx-background-radius: 7px;" text="Volver al inicio">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="16.0">
+            <padding>
+                <Insets bottom="22.0" left="30.0" right="30.0" top="22.0" />
+            </padding>
+            <children>
+
+                <HBox spacing="18.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox minWidth="310.0" prefWidth="310.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #DCE4EE; -fx-border-radius: 12px;">
+                            <padding>
+                                <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+                            </padding>
+                            <children>
+                                <Label style="-fx-text-fill: #142B4A; -fx-font-size: 17px; -fx-font-weight: bold;" text="Crear servicio" />
+
+                                <Label style="-fx-text-fill: #35465C; -fx-font-size: 12px; -fx-font-weight: bold;" text="Tipo de servicio" />
+                                <ComboBox fx:id="cmbTipoServicio" maxWidth="Infinity" prefHeight="36.0" promptText="Selecciona un tipo" />
+
+                                <Label style="-fx-text-fill: #35465C; -fx-font-size: 12px; -fx-font-weight: bold;" text="Código" />
+                                <TextField fx:id="txtCodigo" prefHeight="36.0" promptText="Ejemplo: SER-001" />
+
+                                <Label style="-fx-text-fill: #35465C; -fx-font-size: 12px; -fx-font-weight: bold;" text="Nombre" />
+                                <TextField fx:id="txtNombre" prefHeight="36.0" promptText="Nombre del servicio" />
+
+                                <Label style="-fx-text-fill: #35465C; -fx-font-size: 12px; -fx-font-weight: bold;" text="Descripción" />
+                                <TextArea fx:id="txtDescripcion" prefHeight="72.0" promptText="Describe brevemente el servicio" wrapText="true" />
+
+                                <Region VBox.vgrow="ALWAYS" />
+
+                                <Button fx:id="btnCrearServicio" maxWidth="Infinity" onAction="#crearServicio" prefHeight="39.0" style="-fx-background-color: #2878C8; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 7px;" text="Crear servicio">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Button>
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="12.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox spacing="3.0">
+                                    <children>
+                                        <Label style="-fx-text-fill: #142B4A; -fx-font-size: 17px; -fx-font-weight: bold;" text="Catálogo de servicios" />
+                                    </children>
+                                </VBox>
+
+                                <TableView fx:id="tablaServicios" maxHeight="300.0" onMouseClicked="#seleccionarServicio" prefHeight="300.0" prefWidth="610.0" style="-fx-background-color: white; -fx-background-radius: 10px;" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="colCodigo" maxWidth="100.0" prefWidth="100.0" text="Código" />
+                                        <TableColumn fx:id="colNombre" maxWidth="200.0" prefWidth="200.0" text="Servicio" />
+                                        <TableColumn fx:id="colCostoBase" maxWidth="110.0" prefWidth="110.0" text="Costo base" />
+                              <TableColumn fx:id="colDescripcion" maxWidth="200.0" prefWidth="200.0" text="Descripción" />
+                                    </columns>
+                                </TableView>
+
+                                <VBox maxHeight="170.0" prefHeight="170.0" prefWidth="610.0" spacing="8.0" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #DCE4EE; -fx-border-radius: 12px;">
+                                    <padding>
+                                        <Insets bottom="14.0" left="16.0" right="16.0" top="14.0" />
+                                    </padding>
+                                    <children>
+                                        <Label style="-fx-text-fill: #142B4A; -fx-font-size: 15px; -fx-font-weight: bold;" text="Personalizar servicio seleccionado" />
+
+                                        <HBox spacing="18.0">
+                                            <children>
+                                                <CheckBox fx:id="chkAtencionPrioritaria" text="Atención prioritaria" />
+                                                <CheckBox fx:id="chkSoporteMensual" text="Soporte por 30 días" />
+                                                <CheckBox fx:id="chkAtencionDomicilio" text="Atención a domicilio" />
+                                            </children>
+                                        </HBox>
+
+                                        <HBox alignment="CENTER_LEFT" spacing="12.0">
+                                            <children>
+                                                <VBox spacing="3.0">
+                                                    <children>
+                                                        <Label style="-fx-text-fill: #718096; -fx-font-size: 16px;" text="Costo base">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font></Label>
+                                                        <Label fx:id="lblCostoBase" style="-fx-text-fill: #35465C; -fx-font-size: 20px; -fx-font-weight: bold;" text="0 COP" />
+                                                    </children>
+                                                </VBox>
+
+                                                <VBox spacing="3.0">
+                                                    <children>
+                                                        <Label prefHeight="26.0" prefWidth="92.0" style="-fx-text-fill: #718096; -fx-font-size: 16px;" text="Incrementos" />
+                                                        <Label fx:id="lblIncrementos" style="-fx-text-fill: #35465C; -fx-font-size: 20px; -fx-font-weight: bold;" text="0 COP" />
+                                                    </children>
+                                                </VBox>
+
+                                                <Region HBox.hgrow="ALWAYS" />
+
+                                                <VBox alignment="CENTER_RIGHT" spacing="3.0">
+                                                    <children>
+                                                        <Label style="-fx-text-fill: #718096; -fx-font-size: 16px;" text="Costo final" />
+                                                        <Label fx:id="lblCostoFinal" style="-fx-text-fill: #2878C8; -fx-font-size: 20px; -fx-font-weight: bold;" text="0 COP" />
+                                                    </children>
+                                                </VBox>
+
+                                                <Button fx:id="btnCalcularPersonalizacion" onAction="#calcularPersonalizacion" prefHeight="36.0" style="-fx-background-color: #142B4A; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 7px;" text="Calcular">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
