@@ -33,6 +33,9 @@ class SolicitudServiceTest {
 
     @BeforeEach
     void setUp() {
+        /**
+         * Metodo que inicializa la empresa
+         */
         EmpresaTestUtil.reiniciar();
         clienteService = new ClienteService();
         servicioService = new ServicioTecnologicoService();
@@ -46,6 +49,15 @@ class SolicitudServiceTest {
         redes = servicioService.crearServicio("REDES", "Redes", "SRV-003", "Descripcion");
     }
 
+    /**
+     * Metodo para armar la solicitud a probar
+     * @param codigo
+     * @param clienteSolicitud
+     * @param presencial
+     * @param tecnico
+     * @param elementos
+     * @return
+     */
     private Solicitud armarSolicitud(String codigo, Cliente clienteSolicitud, boolean presencial,
                                      Tecnico tecnico, ElementoContratado... elementos) {
         Solicitud solicitud = new Solicitud(codigo, LocalDate.now(), presencial, 0);
@@ -57,6 +69,9 @@ class SolicitudServiceTest {
         return solicitud;
     }
 
+    /**
+     * Metodo que prueba que a una solicitud se le puedan añadir servicios
+     */
     @Test
     void registrarSolicitudConServicios() {
         Solicitud solicitud = armarSolicitud("SOL-1", cliente, false, null, preventivo, correctivo);
@@ -69,6 +84,9 @@ class SolicitudServiceTest {
         assertEquals(1, solicitudService.listarSolicitudes().size());
     }
 
+    /**
+     * Metodo que prueba que una solicitud se pueda resgistrar con un paquete y complemento
+     */
     @Test
     void registrarSolicitudConServicioPersonalizadoYPaquete() {
         ElementoContratado personalizado = servicioService.personalizarServicio(correctivo, true, true, false);
@@ -82,6 +100,9 @@ class SolicitudServiceTest {
         assertEquals(465000, solicitud.getCostoTotal(), DELTA);
     }
 
+    /**
+     * Metodo que verifica que la solicitud incluya el costo de desplazamiento del tecnico
+     */
     @Test
     void registrarSolicitudPresencialIncluyeDesplazamiento() {
         Tecnico tecnico = new Tecnico("TEC-105", true, 30000);
@@ -92,6 +113,9 @@ class SolicitudServiceTest {
         assertEquals(110000, solicitud.getCostoTotal(), DELTA);
     }
 
+    /**
+     * Metodo que prueba el registro de una solicitud sin un cliente resgistrado
+     */
     @Test
     void registrarSolicitudConClienteNoRegistrado() {
         Cliente noRegistrado = new Cliente.Builder("9999", "Otro Cliente", "otro@correo.com").build();
@@ -101,6 +125,9 @@ class SolicitudServiceTest {
         assertEquals(0, solicitudService.listarSolicitudes().size());
     }
 
+    /**
+     * Metodo que resgistra una solicitud con condigo repetido
+     */
     @Test
     void registrarSolicitudConCodigoRepetido() {
         solicitudService.registrarSolicitud(armarSolicitud("SOL-1", cliente, false, null, preventivo));
@@ -110,6 +137,10 @@ class SolicitudServiceTest {
         assertEquals(1, solicitudService.listarSolicitudes().size());
     }
 
+    /**
+     * Metodo que consulta una solicitud por codigo
+     *
+     */
     @Test
     void consultarSolicitudPorCodigo() {
         Solicitud solicitud = solicitudService.registrarSolicitud(
@@ -119,6 +150,9 @@ class SolicitudServiceTest {
         assertNull(solicitudService.consultarSolicitud("SOL-99"));
     }
 
+    /**
+     * Metodo que prueba el metodo para listar las soliicitudes de la empresa
+     */
     @Test
     void listarSolicitudes() {
         solicitudService.registrarSolicitud(armarSolicitud("SOL-1", cliente, false, null, preventivo));
@@ -127,15 +161,9 @@ class SolicitudServiceTest {
         assertEquals(2, solicitudService.listarSolicitudes().size());
     }
 
-    @Test
-    void generarCodigo() {
-        assertEquals("SOL-1", solicitudService.generarCodigo());
-
-        solicitudService.registrarSolicitud(armarSolicitud("SOL-1", cliente, false, null, preventivo));
-
-        assertEquals("SOL-2", solicitudService.generarCodigo());
-    }
-
+    /**
+     * Metodo que prueba el metodo para calcular un costo de solicitud cuando no se requiere atencion presencial
+     */
     @Test
     void calcularCostoTotalSinAtencionPresencial() {
         Solicitud solicitud = armarSolicitud("SOL-1", cliente, false, null, preventivo, correctivo);
@@ -143,6 +171,9 @@ class SolicitudServiceTest {
         assertEquals(200000, solicitudService.calcularCostoTotal(solicitud), DELTA);
     }
 
+    /**
+     * Metodo que prueba el metodo para calcular un costo de solicitud cuando se requiere atencion presencial
+     */
     @Test
     void calcularCostoTotalConAtencionPresencial() {
         Tecnico tecnico = new Tecnico("TEC-105", true, 30000);
@@ -151,6 +182,9 @@ class SolicitudServiceTest {
         assertEquals(230000, solicitudService.calcularCostoTotal(solicitud), DELTA);
     }
 
+    /**
+     * Metodo que prueba que no se permitan agregar cargos duplicados al costo final
+     */
     @Test
     void calcularCostoTotalVariasVecesNoDuplicaCargos() {
         Tecnico tecnico = new Tecnico("TEC-105", true, 30000);

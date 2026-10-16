@@ -36,6 +36,7 @@ public class Empresa {
         this.listClientes = new ArrayList<>();
         this.listServicios = new ArrayList<>();
         this.listPaquetes = new ArrayList<>();
+        this.listSolicitudes = new ArrayList<>();
     }
 
 

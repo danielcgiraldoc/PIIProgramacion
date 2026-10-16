@@ -20,6 +20,9 @@ class PaqueteServiceTest {
     private ServicioTecnologico correctivo;
     private ServicioTecnologico redes;
 
+    /**
+     * Metodo que iniicializa la empresa y los datos de prueba
+     */
     @BeforeEach
     void setUp() {
         EmpresaTestUtil.reiniciar();
@@ -30,6 +33,9 @@ class PaqueteServiceTest {
         redes = servicioService.crearServicio("REDES", "Redes", "SRV-003", "Descripcion");
     }
 
+    /**
+     * Metodo que crea un paquete para la prueba
+     */
     @Test
     void crearPaquete() {
         PaqueteServicio paquete = paqueteService.crearPaquete("PAQ-001");
@@ -38,6 +44,9 @@ class PaqueteServiceTest {
         assertEquals(1, paqueteService.listarPaquetes().size());
     }
 
+    /**
+     * Metodo que crea un paquete con codigo repetido
+     */
     @Test
     void crearPaqueteConCodigoRepetido() {
         paqueteService.crearPaquete("PAQ-001");
@@ -45,6 +54,9 @@ class PaqueteServiceTest {
         assertThrows(IllegalArgumentException.class, () -> paqueteService.crearPaquete("PAQ-001"));
     }
 
+    /**
+     * Metodo que agrega un servicio y calcula el nuevo costo
+     */
     @Test
     void agregarServiciosYCalcularCosto() {
         PaqueteServicio paquete = paqueteService.crearPaquete("PAQ-001");
@@ -56,6 +68,9 @@ class PaqueteServiceTest {
         assertEquals(200000, paqueteService.calcularCostoTotal(paquete), DELTA);
     }
 
+    /**
+     * Metodo que adrega un servicio personalizdo experimental
+     */
     @Test
     void agregarServicioPersonalizado() {
         PaqueteServicio paquete = paqueteService.crearPaquete("PAQ-001");
@@ -66,6 +81,9 @@ class PaqueteServiceTest {
         assertEquals(155000, paqueteService.calcularCostoTotal(paquete), DELTA);
     }
 
+    /**
+     * Metodo que añade un paquete dentro de otro
+     */
     @Test
     void paqueteDentroDeOtroPaquete() {
         PaqueteServicio mantenimiento = paqueteService.crearPaquete("PAQ-001");
@@ -79,6 +97,9 @@ class PaqueteServiceTest {
         assertEquals(380000, paqueteService.calcularCostoTotal(empresarial), DELTA);
     }
 
+    /**
+     * Metodo de un paquete que no puede incluirse a si mismo
+     */
     @Test
     void paqueteNoPuedeIncluirseASiMismo() {
         PaqueteServicio paquete = paqueteService.crearPaquete("PAQ-001");
@@ -86,6 +107,9 @@ class PaqueteServiceTest {
         assertThrows(IllegalArgumentException.class, () -> paqueteService.agregarElemento(paquete, paquete));
     }
 
+    /**
+     * Metodo de un paquete que no puede incluirse indirectamente
+     */
     @Test
     void paqueteNoPuedeIncluirseIndirectamente() {
         PaqueteServicio a = paqueteService.crearPaquete("A");
