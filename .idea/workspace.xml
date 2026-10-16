@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cc91245-cfa8-45ba-8c70-37957d607d75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/test/java/services/EmpresaTestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/test/java/services/EmpresaTestUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/test/java/services/PaqueteServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/test/java/services/PaqueteServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/test/java/services/ServicioTecnologicoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/test/java/services/ServicioTecnologicoServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/test/java/services/SolicitudServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/test/java/services/SolicitudServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/test/java/services/TecnicoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/test/java/services/TecnicoServiceTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="5cc91245-cfa8-45ba-8c70-37957d607d75" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -196,5 +196,38 @@ class SolicitudServiceTest {
         assertEquals(110000, primero, DELTA);
         assertEquals(primero, segundo, DELTA);
     }
+    /**
+     * Metodo que valida la informacion obligatoria de resgistro
+     */
+    @Test
+    void validarInformacionObligatoria() {
+        Cliente noRegistrado = new Cliente.Builder("9999", "Otro Cliente", "otro@correo.com").build();
+        Solicitud sinClienteRegistrado = armarSolicitud("SOL-1", noRegistrado, false, null, preventivo);
+
+        assertThrows(IllegalArgumentException.class,
+                () -> solicitudService.registrarSolicitud(sinClienteRegistrado));
+
+        solicitudService.registrarSolicitud(armarSolicitud("SOL-1", cliente, false, null, preventivo));
+        Solicitud codigoRepetido = armarSolicitud("SOL-1", cliente, false, null, correctivo);
+
+        assertThrows(IllegalArgumentException.class,
+                () -> solicitudService.registrarSolicitud(codigoRepetido));
+        assertEquals(1, solicitudService.listarSolicitudes().size());
+    }
+
+    /**
+     * Metdodo que pruba la incorporacion de los datos opcionales
+     */
+    @Test
+    void incorporarDatosOpcionales() {
+        Tecnico tecnico = new Tecnico("TEC-105", true, 30000);
+        Solicitud solicitud = armarSolicitud("SOL-1", cliente, true, tecnico, preventivo);
+
+        solicitudService.registrarSolicitud(solicitud);
+
+        assertTrue(solicitud.isAtencionPresencial());
+        assertEquals(tecnico, solicitud.getTheTecnico());
+        assertEquals(110000, solicitud.getCostoTotal(), DELTA);
+    }
 
 }

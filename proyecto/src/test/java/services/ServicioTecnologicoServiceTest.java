@@ -94,4 +94,18 @@ class ServicioTecnologicoServiceTest {
         assertEquals(230000, personalizado.calcularCosto(), DELTA);
     }
 
+    /**
+     * Metodo para probar la msutra de detalles de un servicio
+     */
+    @Test
+    void mostrarDetallesDelServicio() {
+        servicioService.crearServicio("CORRECTIVO", "Mantenimiento correctivo", "SRV-001", "Reparacion de equipos");
+
+        ServicioTecnologico servicio = servicioService.buscarPorCodigo("SRV-001");
+
+        assertEquals("Mantenimiento correctivo", servicio.getNombre());
+        assertEquals("SRV-001", servicio.getCodigo());
+        assertEquals("Reparacion de equipos", servicio.getDescripcion());
+        assertEquals(120000, servicio.getCostoBase(), DELTA);
+    }
 }

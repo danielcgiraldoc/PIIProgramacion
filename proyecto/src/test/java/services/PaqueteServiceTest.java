@@ -8,6 +8,8 @@ import org.example.services.ServicioTecnologicoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PaqueteServiceTest {
@@ -117,5 +119,21 @@ class PaqueteServiceTest {
         paqueteService.agregarElemento(a, b);
 
         assertThrows(IllegalArgumentException.class, () -> paqueteService.agregarElemento(b, a));
+    }
+
+    /**
+     * Metodo que prueba la consulta de los componentes de un paquete
+     */
+    @Test
+    void consultarComponentesDelPaquete() {
+        PaqueteServicio paquete = paqueteService.crearPaquete("PAQ-001");
+        paqueteService.agregarElemento(paquete, preventivo);
+        paqueteService.agregarElemento(paquete, correctivo);
+
+        List<ElementoContratado> componentes = paqueteService.consultarElementos(paquete);
+
+        assertEquals(2, componentes.size());
+        assertTrue(componentes.contains(preventivo));
+        assertTrue(componentes.contains(correctivo));
     }
 }
