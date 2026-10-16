@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cc91245-cfa8-45ba-8c70-37957d607d75" name="Changes" comment="" />
+    <list default="true" id="5cc91245-cfa8-45ba-8c70-37957d607d75" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/viewController/InicioViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="module-info" />
         <option value="Class" />
       </list>
     </option>
@@ -21,63 +26,75 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "laxra-h"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/danielcgiraldoc/PIIProgramacion.git",
+    "accountId": "b03bea45-f488-481b-a4be-5527476c75fe"
+  }
+}]]></component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
       <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000000138745" />
-      <entry key="S30" value="1.0002733261342904" />
-      <entry key="S60" value="1.0212605216446664" />
-      <entry key="M2" value="1.2006809521262454" />
-      <entry key="M5" value="1.8558536051793362" />
-      <entry key="M10" value="2.6881196860696757" />
-      <entry key="M15" value="3.3325523619123487" />
-      <entry key="M30" value="5.32909637681696" />
-      <entry key="H1" value="12.962423284587532" />
-      <entry key="H2" value="37.192541123363064" />
-      <entry key="H4" value="80.32946208247232" />
-      <entry key="D1" value="172.87484863743109" />
-      <entry key="W1" value="199.18578510843125" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.000000000000067" />
+      <entry key="S60" value="1.0000009663856448" />
+      <entry key="M2" value="1.0043126512933094" />
+      <entry key="M5" value="1.7913439462177552" />
+      <entry key="M10" value="5.932635461666252" />
+      <entry key="M15" value="10.485632688577745" />
+      <entry key="M30" value="21.457971146243935" />
+      <entry key="H1" value="40.04274985858827" />
+      <entry key="H2" value="72.74468822029412" />
+      <entry key="H4" value="111.88433098612691" />
+      <entry key="D1" value="172.79103407411085" />
+      <entry key="W1" value="187.41094459184353" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="4.2867766591378466E-224" />
-      <entry key="S2" value="1.4389069635270416E-56" />
-      <entry key="S5" value="4.604824529777499E-23" />
-      <entry key="S10" value="6.785885742056284E-12" />
-      <entry key="S30" value="1.8948423625567487E-4" />
-      <entry key="S60" value="0.014455678120853757" />
-      <entry key="M2" value="0.16301078715572073" />
-      <entry key="M5" value="1.0044882679464937" />
-      <entry key="M10" value="2.1471243311753843" />
-      <entry key="M15" value="3.0039683990220714" />
-      <entry key="M30" value="5.828230655906148" />
-      <entry key="H1" value="14.545104239222669" />
-      <entry key="H2" value="41.64025987271801" />
-      <entry key="H4" value="92.30294851062419" />
-      <entry key="D1" value="204.0692553416197" />
-      <entry key="W1" value="236.12709555164076" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="3.948927401391136E-191" />
+      <entry key="S5" value="8.115445197619713E-77" />
+      <entry key="S10" value="1.1833174331922513E-38" />
+      <entry key="S30" value="3.8104374105769997E-13" />
+      <entry key="S60" value="1.0716882913203227E-6" />
+      <entry key="M2" value="0.0020850282184807483" />
+      <entry key="M5" value="0.2587286771965315" />
+      <entry key="M10" value="1.588163911582415" />
+      <entry key="M15" value="3.2817052244845537" />
+      <entry key="M30" value="9.211758565864761" />
+      <entry key="H1" value="27.085903264459287" />
+      <entry key="H2" value="66.69513581783512" />
+      <entry key="H4" value="116.12161281931577" />
+      <entry key="D1" value="193.26922125933572" />
+      <entry key="W1" value="211.73303488973633" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.02368307135172497" />
-      <entry key="MS500" value="0.47302882336279795" />
-      <entry key="S2" value="0.8293195458144417" />
-      <entry key="S5" value="0.9278734764712827" />
-      <entry key="S10" value="0.9632618940350597" />
-      <entry key="S30" value="0.9880233549601027" />
-      <entry key="S60" value="1.0280847614940607" />
-      <entry key="M2" value="1.354180493426276" />
-      <entry key="M5" value="2.847955284662977" />
-      <entry key="M10" value="4.824582389470599" />
-      <entry key="M15" value="6.327412783442536" />
-      <entry key="M30" value="11.149522026579488" />
-      <entry key="H1" value="27.49877053533294" />
-      <entry key="H2" value="78.82203875482384" />
-      <entry key="H4" value="172.62166246095856" />
-      <entry key="D1" value="376.940443616965" />
-      <entry key="W1" value="435.31228269727745" />
+      <entry key="MS100" value="0.7955364837549187" />
+      <entry key="MS500" value="0.9552829363824373" />
+      <entry key="S2" value="0.9886282245671552" />
+      <entry key="S5" value="0.9954356769359717" />
+      <entry key="S10" value="0.997715228377302" />
+      <entry key="S30" value="0.9992378287020183" />
+      <entry key="S60" value="0.9996208363371212" />
+      <entry key="M2" value="1.0061548882126183" />
+      <entry key="M5" value="2.0471743259305075" />
+      <entry key="M10" value="7.512466724629248" />
+      <entry key="M15" value="13.75647899525119" />
+      <entry key="M30" value="30.65667188531378" />
+      <entry key="H1" value="67.11382142647314" />
+      <entry key="H2" value="139.42448765478142" />
+      <entry key="H4" value="227.99354370083736" />
+      <entry key="D1" value="366.05697862171456" />
+      <entry key="W1" value="399.14347026905284" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -94,29 +111,27 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.ClienteServiceTest.executor": "Run",
-    "JUnit.PaqueteServiceTest.executor": "Run",
-    "JUnit.ServicioTecnologicoServiceTest.executor": "Run",
-    "JUnit.SolicitudServiceTest.executor": "Run",
-    "JUnit.TecnicoServiceTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "dev__Daniel",
+    "git-widget-placeholder": "dev__Laura",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/LENOVO/Documents/IntellJ Codes/PIIProgramacion/proyecto/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -139,5 +154,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

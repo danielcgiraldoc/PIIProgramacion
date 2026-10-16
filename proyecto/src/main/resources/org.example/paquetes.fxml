@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #F4F7FB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.viewController.PaquetesViewController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="76.0" spacing="12.0" style="-fx-background-color: #142B4A;">
+            <padding>
+                <Insets bottom="14.0" left="34.0" right="34.0" top="14.0" />
+            </padding>
+            <children>
+                <VBox spacing="3.0">
+                    <children>
+                        <Label prefHeight="55.0" prefWidth="232.0" style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;" text="Paquetes tecnológicos" />
+                    </children>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="btnVolver" onAction="#volverInicio" prefHeight="36.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-color: #8296AE; -fx-border-radius: 7px; -fx-background-radius: 7px;" text="Volver al inicio" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="16.0">
+            <padding>
+                <Insets bottom="22.0" left="30.0" right="30.0" top="22.0" />
+            </padding>
+            <children>
+                <VBox spacing="4.0" />
+
+                <HBox spacing="18.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox minWidth="330.0" prefWidth="330.0" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #DCE4EE; -fx-border-radius: 12px;">
+                            <padding>
+                                <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+                            </padding>
+                            <children>
+                                <Label style="-fx-text-fill: #142B4A; -fx-font-size: 17px; -fx-font-weight: bold;" text="Crear paquete" />
+                                <Label style="-fx-text-fill: #718096; -fx-font-size: 12px;" text="Asigna un código para identificar el paquete." wrapText="true" />
+
+                                <TextField fx:id="txtCodigoPaquete" prefHeight="36.0" promptText="Ejemplo: PAQ-001" />
+
+                                <Button fx:id="btnCrearPaquete" maxWidth="Infinity" onAction="#crearPaquete" prefHeight="39.0" style="-fx-background-color: #2878C8; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 7px;" text="Crear paquete">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Button>
+                        <Separator prefWidth="200.0" />
+
+                                <Label style="-fx-text-fill: #142B4A; -fx-font-size: 15px; -fx-font-weight: bold;" text="Paquetes creados" />
+
+                                <TableView fx:id="tablaPaquetes" onMouseClicked="#seleccionarPaquete" style="-fx-background-color: white; -fx-background-radius: 10px;" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="colCodigoPaquete" maxWidth="146.0" prefWidth="146.0" text="Código" />
+                                        <TableColumn fx:id="colCostoPaquete" maxWidth="146.0" prefWidth="146.0" text="Costo total" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-border-color: #DCE4EE; -fx-border-radius: 12px;" HBox.hgrow="ALWAYS">
+                            <padding>
+                                <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+                            </padding>
+                            <children>
+                                <Label style="-fx-text-fill: #142B4A; -fx-font-size: 17px; -fx-font-weight: bold;" text="Componentes del paquete" />
+                                <Label style="-fx-text-fill: #718096; -fx-font-size: 12px;" text="Selecciona un paquete y agrega servicios o paquetes disponibles." wrapText="true" />
+
+                                <HBox spacing="10.0">
+                                    <children>
+                                        <ComboBox fx:id="cmbElementoDisponible" prefHeight="36.0" promptText="Selecciona un servicio o paquete" HBox.hgrow="ALWAYS" />
+                                        <Button fx:id="btnAgregarElemento" onAction="#agregarElemento" prefHeight="36.0" style="-fx-background-color: #2878C8; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 7px;" text="Agregar">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Button>
+                                    </children>
+                                </HBox>
+
+                                <TableView fx:id="tablaElementos" style="-fx-background-color: white; -fx-background-radius: 10px;" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="colNombreElemento" maxWidth="350.0" prefWidth="350.0" text="Componente" />
+                                        <TableColumn fx:id="colCostoElemento" maxWidth="200.0" prefWidth="200.0" text="Costo" />
+                                    </columns>
+                                </TableView>
+
+                                <HBox alignment="CENTER_LEFT" spacing="12.0">
+                                    <children>
+                                        <Button fx:id="btnQuitarElemento" onAction="#quitarElemento" prefHeight="36.0" style="-fx-background-color: white; -fx-text-fill: #B54747; -fx-font-weight: bold; -fx-border-color: #E2BABA; -fx-border-radius: 7px; -fx-background-radius: 7px;" text="Quitar seleccionado">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Button>
+                                        <Region HBox.hgrow="ALWAYS" />
+                                          <Label style="-fx-text-fill: #718096; -fx-font-size: 15px;" text="Costo total del paquete" />
+                                        <VBox alignment="CENTER_RIGHT" spacing="3.0">
+                                            <children>
+                                                <Label fx:id="lblCostoTotalPaquete" style="-fx-text-fill: #2878C8; -fx-font-size: 20px; -fx-font-weight: bold;" text="0 COP" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
