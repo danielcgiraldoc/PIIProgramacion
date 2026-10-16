@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc91245-cfa8-45ba-8c70-37957d607d75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/adapter/LegacySupportAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/adapter/ProveedorTecnicos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/external/LegacySupport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/services/ClienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/services/PaqueteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/services/ServicioTecnologicoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/services/SolicitudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/services/TecnicoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/SolicitudServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Solicitud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/Tecnico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/composite/ElementoSistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/composite/ElementoContratado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/composite/PaqueteServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/composite/PaqueteServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/composite/ServicioTecnologico.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/composite/ServicioTecnologico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/AtencionDomicilio.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/AtencionDomicilio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/AtencionPrioritaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/AtencionPrioritaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/Decorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/Decorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/SoporteMensual.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/model/decorator/SoporteMensual.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

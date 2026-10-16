@@ -37,24 +37,26 @@ public class Solicitud {
      */
     public double calcularCostoTotal() {
         double total = 0;
-         total += thePaquete.calcularCosto();
-        if (atencionPresencial){
+        for (ElementoContratado e : listElementos) {
+            total += e.calcularCosto();
+        }
+        if (atencionPresencial) {
             total += theTecnico.getCostoDesplazamiento();
-         }
+        }
         return total;
     }
 
 
     @Override
     public String toString() {
-        return "SolicitudServicio{" +
+        return "Solicitud{" +
                 "codigo='" + codigo + '\'' +
                 ", fechaCreacion=" + fechaCreacion +
                 ", atencionPresencial=" + atencionPresencial +
                 ", costoTotal=" + costoTotal +
                 ", theTecnico=" + theTecnico +
                 ", theCliente=" + theCliente +
-                ", thePaquete=" + thePaquete +
+                ", listElementos=" + listElementos +
                 '}';
     }
 
@@ -107,11 +109,13 @@ public class Solicitud {
         this.theCliente = theCliente;
     }
 
-    public PaqueteServicio getThePaquete() {
-        return thePaquete;
+    public List<ElementoContratado> getListElementos() {
+        return listElementos;
     }
 
-    public void setThePaquete(PaqueteServicio thePaquete) {
-        this.thePaquete = thePaquete;
+    public void setListElementos(List<ElementoContratado> listElementos) {
+        this.listElementos = listElementos;
     }
+
+
 }
