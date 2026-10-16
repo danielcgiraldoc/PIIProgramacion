@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc91245-cfa8-45ba-8c70-37957d607d75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto/src/main/java/org/example/viewController/InicioViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proyecto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/target/test-classes/services/ClienteServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/target/test-classes/services/ClienteServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/target/test-classes/services/EmpresaTestUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/target/test-classes/services/EmpresaTestUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/target/test-classes/services/PaqueteServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/target/test-classes/services/PaqueteServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/target/test-classes/services/ServicioTecnologicoServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/target/test-classes/services/ServicioTecnologicoServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/target/test-classes/services/SolicitudServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/target/test-classes/services/SolicitudServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/target/test-classes/services/TecnicoServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/target/test-classes/services/TecnicoServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "laxra-h"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;laxra-h&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/danielcgiraldoc/PIIProgramacion.git",
-    "accountId": "b03bea45-f488-481b-a4be-5527476c75fe"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/danielcgiraldoc/PIIProgramacion.git&quot;,
+    &quot;accountId&quot;: &quot;b03bea45-f488-481b-a4be-5527476c75fe&quot;
   }
-}]]></component>
+}</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
@@ -111,13 +117,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ClienteServiceTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "dev__Laura",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
