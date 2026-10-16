@@ -16,4 +16,12 @@ public class MantenimientoPreventivo extends ServicioTecnologico {
         super(nombre, codigo, descripcion, 80000);
     }
 
+    /**
+     * Metodo para definir el precio de la clase obligando a implementar el metodo de la clase padre
+     * @return
+     */
+    @Override
+    public double calcularCosto() {
+        return 80000;
+    }
 }

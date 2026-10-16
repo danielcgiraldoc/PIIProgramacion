@@ -16,9 +16,12 @@ public class InstalacionRedes extends ServicioTecnologico {
         super(nombre, codigo, descripcion, 180000);
     }
 
-
-
-
-
-
+    /**
+     * Metodo para definir el precio de la clase obligando a implementar el metodo de la clase padre
+     * @return
+     */
+    @Override
+    public double calcularCosto() {
+        return 180000;
+    }
 }

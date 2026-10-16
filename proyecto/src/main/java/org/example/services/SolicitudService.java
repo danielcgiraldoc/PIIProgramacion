@@ -2,7 +2,6 @@ package org.example.services;
 
 import org.example.model.Empresa;
 import org.example.model.Solicitud;
-import org.example.model.Tecnico;
 import org.example.model.composite.ElementoContratado;
 
 import java.util.List;
@@ -31,8 +30,13 @@ public class SolicitudService {
         return "SOL-" + (empresa.getListSolicitudes().size() + 1);
     }
 
-    public SolicitudServicio registrarSolicitud(SolicitudServicio solicitud) {
-        if (clienteService.buscarPorDocumento(solicitud.getCliente().getDocumento()) == null) {
+    /**
+     * Metodo para registrar una solicitud
+     * @param solicitud
+     * @return
+     */
+    public Solicitud registrarSolicitud(Solicitud solicitud) {
+        if (clienteService.buscarPorDocumento(solicitud.getTheCliente().getDocumento()) == null) {
             throw new IllegalArgumentException("El cliente no está registrado");
         }
         if (consultarSolicitud(solicitud.getCodigo()) != null) {
@@ -43,8 +47,13 @@ public class SolicitudService {
         return solicitud;
     }
 
-    public SolicitudServicio consultarSolicitud(String codigo) {
-        for (SolicitudServicio solicitud : empresa.getListSolicitudes()) {
+    /**
+     * Metodo para consultar una solicitud por su codigo
+     * @param codigo
+     * @return
+     */
+    public Solicitud consultarSolicitud(String codigo) {
+        for (Solicitud solicitud : empresa.getListSolicitudes()) {
             if (solicitud.getCodigo().equals(codigo)) {
                 return solicitud;
             }
@@ -52,35 +61,29 @@ public class SolicitudService {
         return null;
     }
 
-    public List<SolicitudServicio> listarSolicitudes() {
+    /**
+     * Metodo que permite listar las solicitudes de la empresa
+     * @return
+     */
+    public List<Solicitud> listarSolicitudes() {
         return empresa.getListSolicitudes();
     }
 
-    public double calcularCostoTotal(SolicitudServicio solicitud) {
+    /**
+     * Metodo que permite calcular el costo total de una solicitud
+     * @param solicitud
+     * @return
+     */
+    public double calcularCostoTotal(Solicitud solicitud) {
         double total = 0;
-        for (ElementoContratado elemento : solicitud.getElementos()) {
+        for (ElementoContratado elemento : solicitud.getListElementos()) {
             total += elemento.calcularCosto();
         }
-        if (solicitud.isPresencial()) {
-            total += solicitud.getCostoDesplazamiento();
+        if (solicitud.isAtencionPresencial()) {
+            total += solicitud.getTheTecnico().getCostoDesplazamiento();
         }
         return total;
     }
 
-    public void confirmarSolicitud(String codigo) {
-        SolicitudServicio solicitud = consultarSolicitud(codigo);
-        if (solicitud == null) {
-            throw new IllegalArgumentException("No existe la solicitud " + codigo);
-        }
-        if (solicitud.isPresencial()) {
-            TecnicoDisponibilidad tecnico = tecnicoService.consultarDisponibilidad(solicitud.getEspecialidad());
-            if (!tecnico.isDisponible()) {
-                throw new IllegalStateException("No hay técnicos disponibles, la solicitud no puede confirmarse");
-            }
-            solicitud.setIdTecnico(tecnico.getIdTecnico());
-            solicitud.setCostoDesplazamiento(tecnico.getCostoDesplazamiento());
-        }
-        solicitud.setCostoTotal(calcularCostoTotal(solicitud));
-        solicitud.setConfirmada(true);
-    }
+
 }

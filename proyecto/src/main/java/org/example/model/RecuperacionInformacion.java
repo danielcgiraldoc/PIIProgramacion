@@ -14,4 +14,13 @@ public class RecuperacionInformacion extends ServicioTecnologico {
     public RecuperacionInformacion(String nombre, String codigo, String descripcion) {
         super(nombre, codigo, descripcion, 150000);
     }
+
+    /**
+     * Metodo para definir el precio de la clase obligando a implementar el metodo de la clase padre
+     * @return
+     */
+    @Override
+    public double calcularCosto() {
+        return 150000;
+    }
 }

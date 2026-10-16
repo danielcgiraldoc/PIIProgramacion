@@ -17,7 +17,7 @@ public class LegacySupportAdapter implements ProveedorTecnicos {
 
 
     /**
-     * Metodo para consultar y reotornar un tecnico desde el agente externo al interno, covirtiendo
+     * Metodo para consultar y retornar un tecnico desde el agente externo al interno, covirtiendo
      * la manera en que se mueestran sus datos
      * @param especialidad
      * @return
