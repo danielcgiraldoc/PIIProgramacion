@@ -69,6 +69,7 @@ public class Empresa {
 
 
 
+
     //Getters & Setters
 
     public String getNombre() { return nombre; }

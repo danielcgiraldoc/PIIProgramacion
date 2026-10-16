@@ -4,6 +4,7 @@ import org.example.model.composite.ElementoContratado;
 import org.example.model.composite.PaqueteServicio;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Solicitud {
@@ -28,6 +29,7 @@ public class Solicitud {
         this.fechaCreacion = fechaCreacion;
         this.atencionPresencial = atencionPresencial;
         this.costoTotal = costoTotal;
+        this.listElementos = new ArrayList<>();
     }
 
 
